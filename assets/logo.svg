@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D6A4F" />
+      <stop offset="100%" stop-color="#52B788" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#40916C" />
+      <stop offset="100%" stop-color="#1B4332" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1b4332" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Circular Bio-Frame with stylized woven vine & wheat textures -->
+  <circle cx="250" cy="250" r="225" fill="none" stroke="#2D6A4F" stroke-width="14" stroke-linecap="round" filter="url(#subtleShadow)"/>
+  
+  <!-- Outer Organic Woven Boundary Leaves -->
+  <path d="M 65,180 C 70,120 120,60 200,45 C 170,75 160,125 180,165 C 150,140 100,140 65,180 Z" fill="#388E3C" opacity="0.9" />
+  <path d="M 50,220 C 45,150 90,85 155,55 C 130,95 130,150 160,190 C 120,170 80,185 50,220 Z" fill="#2E7D32" />
+  <path d="M 45,280 C 40,220 65,160 110,120 C 100,165 115,215 150,245 C 105,235 70,250 45,280 Z" fill="#1B5E20" />
+
+  <!-- Botanical Sprout Branch rising to the top right -->
+  <!-- Main Stem -->
+  <path d="M 230,350 Q 280,270 330,160 Q 355,100 370,55" fill="none" stroke="#2D6A4F" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Sprout Leaves -->
+  <!-- Topmost Right Leaf -->
+  <path d="M 370,55 C 430,70 450,135 410,185 C 380,140 370,95 370,55 Z" fill="url(#leafGrad)" />
+  <path d="M 370,55 Q 395,115 410,185" fill="none" stroke="#1B4332" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Middle Leaf on Stem -->
+  <path d="M 335,145 C 290,130 255,160 260,205 C 295,200 325,175 335,145 Z" fill="#40916C" />
+  <path d="M 335,145 Q 295,175 260,205" fill="none" stroke="#1B4332" stroke-width="2.5"/>
+
+  <!-- Top Left Leaf on Stem -->
+  <path d="M 355,105 C 330,60 280,65 265,105 C 295,115 330,115 355,105 Z" fill="#52B788" />
+  
+  <!-- Dual Organic Mushrooms (Pleurotus Ostreatus / Fungi) -->
+  <!-- Big Mushroom -->
+  <!-- Stipe (Stem) -->
+  <path d="M 140,290 C 145,245 150,215 155,190 L 175,190 C 172,220 170,255 168,290 Z" fill="#2D6A4F" />
+  <!-- Cap -->
+  <path d="M 105,190 C 105,135 210,135 215,190 C 190,205 130,205 105,190 Z" fill="#388E3C" />
+  <path d="M 112,185 C 125,150 195,150 208,185 C 185,195 135,195 112,185 Z" fill="#A7D7C5" opacity="0.25"/>
+  <!-- Cap Underbelly gills curve -->
+  <path d="M 105,190 Q 160,210 215,190" fill="none" stroke="#1B4332" stroke-width="4"/>
+  <!-- Gills slits -->
+  <path d="M 125,193 L 132,186 M 140,195 L 145,185 M 155,196 L 157,185 M 170,196 L 168,185 M 185,194 L 180,185 M 198,191 L 192,186" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Small Mushroom -->
+  <!-- Stipe -->
+  <path d="M 215,290 C 218,255 220,230 222,210 L 236,210 C 234,232 232,260 230,290 Z" fill="#2D6A4F" />
+  <!-- Cap -->
+  <path d="M 185,210 C 185,168 265,168 268,210 C 250,222 205,222 185,210 Z" fill="#40916C" />
+  <path d="M 185,210 Q 226,225 268,210" fill="none" stroke="#1B4332" stroke-width="3"/>
+  <path d="M 200,212 L 205,206 M 215,215 L 217,206 M 228,216 L 227,206 M 240,214 L 237,206 M 252,211 L 247,206" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Intricate Mycelium Network & Agricultural Substrate Nest (Bottom Half) -->
+  <g fill="none" stroke="#2D6A4F" stroke-linecap="round">
+    <!-- Curved Woven Hyphae Net Layer 1 -->
+    <path d="M 80,310 Q 150,330 240,310 Q 330,290 420,310" stroke-width="7"/>
+    <path d="M 60,350 Q 160,380 260,350 Q 360,320 440,355" stroke-width="8"/>
+    <path d="M 75,390 Q 180,430 290,400 Q 390,370 435,400" stroke-width="8"/>
+    <path d="M 110,435 Q 210,470 315,445 Q 390,425 410,435" stroke-width="8"/>
+    
+    <!-- Cross-woven hyphae threads & bio-mesh nodes -->
+    <path d="M 100,305 C 130,360 140,410 150,450" stroke-width="6"/>
+    <path d="M 150,295 C 190,360 210,420 220,465" stroke-width="6.5"/>
+    <path d="M 210,295 C 240,355 270,410 290,465" stroke-width="6.5"/>
+    <path d="M 270,290 C 300,345 330,410 350,455" stroke-width="6"/>
+    <path d="M 330,290 C 360,340 390,395 405,435" stroke-width="5.5"/>
+    <path d="M 380,300 C 400,340 420,380 430,410" stroke-width="5"/>
+    
+    <!-- Interlacing diagonal supportive filaments -->
+    <path d="M 120,440 Q 180,370 250,340 Q 320,310 390,300" stroke-width="5" stroke-dasharray="8 6"/>
+    <path d="M 80,330 Q 180,330 270,380 Q 350,430 410,435" stroke-width="5" stroke-dasharray="10 5"/>
+    <path d="M 170,460 Q 260,400 350,350 Q 400,320 440,330" stroke-width="4.5"/>
+    <path d="M 90,375 Q 180,410 270,330 Q 340,280 390,260" stroke-width="4.5"/>
+  </g>
+
+  <!-- Mycelium Spore Nodes (Subtle accent glowing dots) -->
+  <g fill="#52B788">
+    <circle cx="130" cy="340" r="4.5" />
+    <circle cx="180" cy="370" r="5" />
+    <circle cx="240" cy="330" r="5.5" />
+    <circle cx="310" cy="360" r="5" />
+    <circle cx="370" cy="330" r="4.5" />
+    <circle cx="210" cy="425" r="5" />
+    <circle cx="280" cy="415" r="5.5" />
+    <circle cx="345" cy="410" r="4.5" />
+    <circle cx="160" cy="430" r="4" />
+  </g>
+</svg>

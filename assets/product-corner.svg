@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" fill="none">
+  <defs>
+    <linearGradient id="cg-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8CFC0"/>
+      <stop offset="100%" stop-color="#B8AFA0"/>
+    </linearGradient>
+    <linearGradient id="cg-left" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A89B8A"/>
+      <stop offset="100%" stop-color="#8C7F6E"/>
+    </linearGradient>
+    <linearGradient id="cg-right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#998C7B"/>
+      <stop offset="100%" stop-color="#7A6E5E"/>
+    </linearGradient>
+    <linearGradient id="cg-inner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8E0D2"/>
+      <stop offset="100%" stop-color="#CEC6B8"/>
+    </linearGradient>
+    <linearGradient id="cg-wax" x1="0%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.22)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <filter id="cg-shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.38)"/>
+    </filter>
+  </defs>
+
+  <!-- L-shaped corner guard — isometric view -->
+
+  <!-- Arm 1 (horizontal arm) top face -->
+  <polygon points="130,55 230,107 230,145 130,93" fill="url(#cg-top)" stroke="#C0B4A2" stroke-width="0.8" filter="url(#cg-shadow)"/>
+  <!-- Arm 2 (vertical arm) top face -->
+  <polygon points="90,78 130,55 130,93 90,116" fill="url(#cg-inner)" stroke="#C0B4A2" stroke-width="0.8"/>
+
+  <!-- Wax sheen -->
+  <polygon points="130,55 230,107 230,145 130,93" fill="url(#cg-wax)"/>
+  <polygon points="90,78 130,55 130,93 90,116" fill="url(#cg-wax)"/>
+
+  <!-- Left face of arm 1 -->
+  <polygon points="130,93 230,145 230,185 130,133" fill="url(#cg-left)" stroke="#9A8E7D" stroke-width="0.8"/>
+  <!-- Left face of arm 2 / corner -->
+  <polygon points="90,116 130,93 130,133 90,156" fill="url(#cg-left)" stroke="#9A8E7D" stroke-width="0.8" opacity="0.88"/>
+
+  <!-- Front face (inner corner) -->
+  <polygon points="90,78 90,116 130,133 130,93" fill="#BDB5A6" stroke="#9A8E7D" stroke-width="0.8"/>
+
+  <!-- Right face of arm 1 -->
+  <polygon points="230,107 230,185 180,212 180,136" fill="url(#cg-right)" stroke="#8A7E6D" stroke-width="0.8"/>
+  <!-- Bottom arm right face -->
+  <polygon points="90,156 130,133 180,136 180,212 120,240" fill="url(#cg-right)" stroke="#8A7E6D" stroke-width="0.8" opacity="0.9"/>
+
+  <!-- Bottom base -->
+  <polygon points="120,240 180,212 180,220 120,248" fill="#8C8070" stroke="#7A6E5E" stroke-width="0.8"/>
+
+  <!-- Organic fiber texture on top arm -->
+  <line x1="148" y1="60" x2="148" y2="118" stroke="#C8BDA8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="166" y1="70" x2="166" y2="128" stroke="#C8BDA8" stroke-width="0.8" opacity="0.35"/>
+  <line x1="184" y1="80" x2="184" y2="138" stroke="#C8BDA8" stroke-width="0.8" opacity="0.3"/>
+  <line x1="130" y1="62" x2="218" y2="108" stroke="#C8BDA8" stroke-width="0.8" opacity="0.35"/>
+  <line x1="130" y1="75" x2="218" y2="122" stroke="#C8BDA8" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- 90° angle indicator -->
+  <path d="M 110 96 L 110 108 L 122 108" stroke="#52B788" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Eco label -->
+  <text x="195" y="265" text-anchor="middle" font-family="'Satoshi',sans-serif" font-size="11" fill="#8FA890" font-weight="700" letter-spacing="1">Proteksi 90°</text>
+</svg>

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MushFoam — Kemasan Pelindung dari Miselium Jamur</title>
+  <meta name="description"
+    content="MushFoam adalah kemasan bio-komposit pengganti styrofoam yang terbuat dari miselium jamur tiram dan limbah pertanian lokal. Kuat, ringan, dan terurai alami menjadi kompos.">
+  <meta name="keywords"
+    content="MushFoam, kemasan jamur, bio packaging, styrofoam ramah lingkungan, miselium, PKM-K UGM">
+  <meta property="og:title" content="MushFoam — Kemasan Pelindung dari Miselium Jamur">
+  <meta property="og:description"
+    content="Alternatif styrofoam berbasis miselium jamur dan limbah ampas tebu. Pelindung yang kuat, dan terurai alami menjadi pupuk.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="LOGO.png">
+  <link rel="apple-touch-icon" href="LOGO.png">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,600,500,400,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <canvas id="mycelium-canvas"></canvas>
+
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="MushFoam beranda">
+        <img src="LOGO.png" alt="Logo MushFoam" class="logo-img" width="40" height="40">
+        <div>
+          <span class="brand-name">MushFoam</span>
+          <span class="brand-tag">Bio-Packaging</span>
+        </div>
+      </a>
+
+      <nav aria-label="Menu utama">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#produk" class="nav-link">Product</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#kontak" class="btn btn-primary" id="nav-contact-btn">Contact</a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Buka menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#produk" class="mobile-nav-link">Product</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#kontak" class="mobile-nav-link" style="color: var(--clr-primary);">Contact →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Text -->
+        <div class="hero-content reveal">
+          <div class="pill pill-green">
+            <span class="dot"></span>
+            100% Biodegradable
+          </div>
+
+          <h1 class="hero-title">
+            Kemasan Jamur. <br><span class="highlight">Pengganti Styrofoam.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Kuat, ringan, dan 100% terurai kembali menjadi kompos. Solusi kemasan organik untuk brand Anda.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#produk" class="btn btn-primary" id="hero-cta-1">
+              Lihat Produk
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+            <a href="#kontak" class="btn btn-ghost" id="hero-cta-2">Hubungi Kami</a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Lapisan beeswax alami
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              Terurai dalam hitungan minggu
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 14 14" />
+              </svg>
+              Bahan baku lokal Yogyakarta
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Visual Card -->
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="product-showcase">
+            <div class="showcase-viewport">
+              <div class="product-placeholder">
+                <img id="hero-preview-img" src="MushFlat.png" alt="MushFlat — Lembaran Miselium" class="placeholder-img">
+              </div>
+            </div>
+
+            <div class="showcase-tabs" role="tablist">
+              <button class="stab active" data-type="panel" role="tab">MushFlat</button>
+              <button class="stab" data-type="corner" role="tab">MushCube</button>
+            </div>
+
+            <div class="showcase-footer">
+              <span class="pname" id="hero-pill-title">MushFlat — Lembaran 60 × 40 cm</span>
+              <span class="pprice">Rp 5.000 / pcs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS — KRISIS PLASTIK GLOBAL ===== -->
+    <section class="crisis-section" aria-label="Data krisis plastik global">
+      <div class="container">
+
+        <div class="crisis-header reveal">
+          <span class="section-tag">Krisis Plastik Global</span>
+          <h2 class="crisis-headline">Setiap menit, 1 truk sampah plastik<br>dibuang ke lautan.</h2>
+          <p class="crisis-subtext">Polystyrene (EPS/Styrofoam) menjadi salah satu polutan paling persisten di bumi —
+            tak terurai, tak terlihat, tapi merusak segalanya.</p>
+        </div>
+
+        <!-- Big Number Row -->
+        <div class="crisis-bignums reveal">
+          <div class="bignum-item">
+            <div class="bignum-val" data-target="14700000">14,7 Jt</div>
+            <div class="bignum-unit">Ton / Tahun</div>
+            <div class="bignum-desc">Sampah EPS terbuang secara global</div>
+          </div>
+          <div class="bignum-divider"></div>
+          <div class="bignum-item">
+            <div class="bignum-val crisis-red">#2</div>
+            <div class="bignum-unit">Dunia</div>
+            <div class="bignum-desc">Indonesia penyumbang sampah plastik ke lautan</div>
+          </div>
+          <div class="bignum-divider"></div>
+          <div class="bignum-item">
+            <div class="bignum-val">500</div>
+            <div class="bignum-unit">Tahun</div>
+            <div class="bignum-desc">Waktu urai EPS di alam terbuka</div>
+          </div>
+          <div class="bignum-divider"></div>
+          <div class="bignum-item">
+            <div class="bignum-val crisis-green">Minggu</div>
+            <div class="bignum-unit">Saja</div>
+            <div class="bignum-desc">MushFoam terurai menjadi kompos alami</div>
+          </div>
+        </div>
+
+        <!-- Infographic Charts Row -->
+        <div class="crisis-charts reveal">
+
+          <!-- Chart 1: Waktu Urai Perbandingan -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <span class="chart-icon">⏱</span>
+              <div>
+                <div class="chart-title">Waktu Penguraian Material</div>
+                <div class="chart-subtitle">Perbandingan terhadap umur ekosistem</div>
+              </div>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-row">
+                <span class="bar-label">EPS / Styrofoam</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill-red" style="--pct:100%"></div>
+                </div>
+                <span class="bar-val">500 thn</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Plastik PET</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill-orange" style="--pct:90%"></div>
+                </div>
+                <span class="bar-val">450 thn</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Molded Pulp</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill-yellow" style="--pct:4%"></div>
+                </div>
+                <span class="bar-val">6 bln</span>
+              </div>
+              <div class="bar-row bar-row-highlight">
+                <span class="bar-label">🌿 MushFoam</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill-green" style="--pct:1%"></div>
+                </div>
+                <span class="bar-val crisis-green">3–8 mgg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart 2: Komposisi sampah TPA Indonesia -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <span class="chart-icon">🗑</span>
+              <div>
+                <div class="chart-title">Komposisi Sampah Plastik Indonesia</div>
+                <div class="chart-subtitle">Sumber: KLHK 2023, 20.185 Ton / hari di TPA</div>
+              </div>
+            </div>
+            <div class="donut-wrapper">
+              <svg class="donut-chart" viewBox="0 0 120 120">
+                <!-- EPS/Styrofoam 18% -->
+                <circle class="donut-seg donut-red" r="45" cx="60" cy="60" stroke-dasharray="50.9 233.5"
+                  stroke-dashoffset="0" />
+                <!-- HDPE 24% -->
+                <circle class="donut-seg donut-orange" r="45" cx="60" cy="60" stroke-dasharray="67.9 216.5"
+                  stroke-dashoffset="-50.9" />
+                <!-- PET 22% -->
+                <circle class="donut-seg donut-yellow" r="45" cx="60" cy="60" stroke-dasharray="62.2 222.2"
+                  stroke-dashoffset="-118.8" />
+                <!-- Lainnya 36% -->
+                <circle class="donut-seg donut-gray" r="45" cx="60" cy="60" stroke-dasharray="101.8 182.6"
+                  stroke-dashoffset="-181.0" />
+                <text x="60" y="57" text-anchor="middle" font-size="13" fill="#E06060" font-weight="900"
+                  font-family="sans-serif">18%</text>
+                <text x="60" y="70" text-anchor="middle" font-size="7" fill="#94B8A4"
+                  font-family="sans-serif">EPS</text>
+              </svg>
+              <div class="donut-legend">
+                <div class="legend-item"><span class="legend-dot" style="background:#E06060"></span><span>EPS /
+                    Styrofoam — 18%</span></div>
+                <div class="legend-item"><span class="legend-dot" style="background:#E09440"></span><span>HDPE / PP —
+                    24%</span></div>
+                <div class="legend-item"><span class="legend-dot" style="background:#C9A94E"></span><span>PET —
+                    22%</span></div>
+                <div class="legend-item"><span class="legend-dot" style="background:#3A5248"></span><span>Lainnya —
+                    36%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart 3: Dampak Lingkungan -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <span class="chart-icon">🌍</span>
+              <div>
+                <div class="chart-title">Dampak EPS per 1.000 Ton</div>
+                <div class="chart-subtitle">Dibandingkan batas aman ekosistem laut</div>
+              </div>
+            </div>
+            <div class="impact-list">
+              <div class="impact-row">
+                <div class="impact-label">
+                  <span class="impact-icon">🐟</span>
+                  <span>Ekosistem laut terdampak</span>
+                </div>
+                <div class="impact-meter">
+                  <div class="impact-bar" style="--w:88%"></div>
+                  <span class="impact-pct">88%</span>
+                </div>
+              </div>
+              <div class="impact-row">
+                <div class="impact-label">
+                  <span class="impact-icon">💧</span>
+                  <span>Kontaminasi air tanah</span>
+                </div>
+                <div class="impact-meter">
+                  <div class="impact-bar" style="--w:73%"></div>
+                  <span class="impact-pct">73%</span>
+                </div>
+              </div>
+              <div class="impact-row">
+                <div class="impact-label">
+                  <span class="impact-icon">🌾</span>
+                  <span>Penurunan kesuburan tanah</span>
+                </div>
+                <div class="impact-meter">
+                  <div class="impact-bar" style="--w:61%"></div>
+                  <span class="impact-pct">61%</span>
+                </div>
+              </div>
+              <div class="impact-row">
+                <div class="impact-label">
+                  <span class="impact-icon">🫁</span>
+                  <span>Partikel terhirup manusia</span>
+                </div>
+                <div class="impact-meter">
+                  <div class="impact-bar" style="--w:47%"></div>
+                  <span class="impact-pct">47%</span>
+                </div>
+              </div>
+            </div>
+            <!-- MushFoam zero stat -->
+            <div class="impact-zero">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              MushFoam: Nol dampak negatif — terurai menjadi pupuk
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROBLEM / SOLUTION ===== -->
+    <section class="split-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Masalah & Solusi</span>
+          <h2 class="section-title">Styrofoam menjadi sampah. MushFoam menjadi kompos.</h2>
+        </div>
+        <div class="split-grid">
+          <!-- Problem -->
+          <div class="split-card problem reveal">
+            <span class="card-label">⚠ Styrofoam Plastik (EPS)</span>
+            <h3 class="card-title">Kenapa Styrofoam Jadi Masalah</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="15" y1="9" x2="9" y2="15" />
+                  <line x1="9" y1="9" x2="15" y2="15" />
+                </svg>
+                <div class="feature-text">
+                  <strong>Bertahan ratusan tahun di alam</strong>
+                </div>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="15" y1="9" x2="9" y2="15" />
+                  <line x1="9" y1="9" x2="15" y2="15" />
+                </svg>
+                <div class="feature-text">
+                  <strong>Rontok dan mengotori produk</strong>
+                </div>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="15" y1="9" x2="9" y2="15" />
+                  <line x1="9" y1="9" x2="15" y2="15" />
+                </svg>
+                <div class="feature-text">
+                  <strong>Kurang baik untuk citra lingkungan</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Solution -->
+          <div class="split-card solution reveal reveal-delay-1">
+            <span class="card-label">✦ MushFoam (Bio-Komposit)</span>
+            <h3 class="card-title">Apa yang Membuat Kami Berbeda</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <div class="feature-text">
+                  <strong>Terurai jadi pupuk dalam hitungan minggu</strong>
+                </div>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <div class="feature-text">
+                  <strong>Menyerap benturan tanpa retak</strong>
+                </div>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <div class="feature-text">
+                  <strong>Eco-branding yang kuat</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products-section" id="produk">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Katalog Produk</span>
+          <h2 class="section-title">Pilih bentuk perlindungan yang tepat.</h2>
+        </div>
+
+        <div class="products-grid products-grid-2">
+
+          <!-- Product 1: MushFlat -->
+          <div class="product-card reveal">
+            <div class="product-img-box">
+              <img src="MushFlat.png" alt="MushFlat — Lembaran Bio-Komposit Miselium 60×40×2 cm">
+            </div>
+            <div class="product-info">
+              <span class="product-type">Styrofoam Lembaran</span>
+              <h3 class="product-name">MushFlat</h3>
+              <p class="product-desc">Lembaran bio-komposit miselium serbaguna untuk pelapis kardus atau bantalan kargo. Dimensi presisi dengan lapisan beeswax anti-air — ringan, kuat, terurai alami.</p>
+              <div class="product-specs">
+                <span class="spec-tag">60 × 40 cm</span>
+                <span class="spec-tag">Tebal 2 cm</span>
+                <span class="spec-tag">Lapisan Beeswax</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="price-main">Rp 5.000 <span class="price-per">/ pcs</span></div>
+                <div class="price-sub">Harga grosir B2B tersedia</div>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=6282137503755&text=Halo%20Tim%20MushFoam%2C%20saya%20ingin%20memesan%20MushFlat."
+                target="_blank" rel="noopener" class="btn btn-primary"
+                style="padding:0.6rem 1.2rem;font-size:0.85rem;">Pesan</a>
+            </div>
+          </div>
+
+          <!-- Product 2: MushCube -->
+          <div class="product-card reveal reveal-delay-1">
+            <div class="product-img-box">
+              <img src="Mushcube.png" alt="MushCube — Blok Proteksi Miselium 15×15 cm">
+            </div>
+            <div class="product-info">
+              <span class="product-type">Blok Proteksi</span>
+              <h3 class="product-name">MushCube</h3>
+              <p class="product-desc">Blok miselium kompak untuk corner insert dan pengisi celah kemasan. Dimensi 15×15 cm, tinggi 5 cm, tebal 1,3 cm — cocok untuk elektronik, furnitur, dan keramik.</p>
+              <div class="product-specs">
+                <span class="spec-tag">15 × 15 cm</span>
+                <span class="spec-tag">Tinggi 5 cm</span>
+                <span class="spec-tag">Tebal 1,3 cm</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="price-main">Rp 4.500 <span class="price-per">/ pcs</span></div>
+                <div class="price-sub">Harga grosir B2B tersedia</div>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=6282137503755&text=Halo%20Tim%20MushFoam%2C%20saya%20ingin%20memesan%20MushCube."
+                target="_blank" rel="noopener" class="btn btn-primary"
+                style="padding:0.6rem 1.2rem;font-size:0.85rem;">Pesan</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about-section" id="about">
+      <div class="container">
+
+        <!-- Intro -->
+        <div class="about-intro-grid reveal">
+          <div class="about-intro-text">
+            <span class="section-tag">Tentang MushFoam</span>
+            <h2 class="section-title">Bagaimana jika kemasan bisa dikembalikan ke tanah?</h2>
+            <p>Kami merajut serat ampas tebu menggunakan miselium jamur tiram menjadi material pelindung yang ringan dan
+              tangguh.</p>
+            <p>Tanpa bahan kimia, tanpa plastik. Setelah bertugas, ia kembali menjadi bagian dari alam.</p>
+          </div>
+          <div class="about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=720&q=80&fit=crop"
+              alt="Bahan organik alami untuk kemasan ramah lingkungan" class="about-hero-img" loading="lazy">
+            <div class="about-img-badge">100% Organik</div>
+          </div>
+        </div>
+
+        <!-- CSS Circular Economy Diagram -->
+        <div class="section-header reveal">
+          <span class="section-tag">Siklus Zero Waste</span>
+          <h2 class="section-title">Dari ladang, kembali ke tanah</h2>
+        </div>
+        <div class="cycle-diagram reveal">
+          <div class="cycle-node" style="--i:0">
+            <div class="cycle-node-icon">🌾</div>
+            <div class="cycle-node-label">Limbah<br>Pertanian</div>
+          </div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-node" style="--i:1">
+            <div class="cycle-node-icon">🔬</div>
+            <div class="cycle-node-label">Bio<br>Fabrikasi</div>
+          </div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-node cycle-node-highlight" style="--i:2">
+            <div class="cycle-node-icon">📦</div>
+            <div class="cycle-node-label">MushFoam<br>Kemasan</div>
+          </div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-node" style="--i:3">
+            <div class="cycle-node-icon">🌱</div>
+            <div class="cycle-node-label">Kompos<br>Alami</div>
+          </div>
+          <div class="cycle-arrow cycle-arrow-back">↩</div>
+        </div>
+
+        <!-- Process -->
+        <div class="section-header reveal">
+          <span class="section-tag">Proses Fabrikasi</span>
+          <h2 class="section-title">Lima tahap dari limbah ladang ke kemasan siap kirim</h2>
+        </div>
+
+        <div class="process-grid reveal">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <span class="step-name">Preparasi Substrat</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <span class="step-name">Sterilisasi Uap</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <span class="step-name">Inkubasi Jamur</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <span class="step-name">Pencetakan Bentuk</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">05</span>
+            <span class="step-name">Terminasi (Oven)</span>
+          </div>
+        </div>
+
+        <!-- Team -->
+        <div class="team-section-inner">
+          <div class="section-header">
+            <span class="section-tag">Tim Pengembang</span>
+            <h2 class="section-title">Mahasiswa lintas disiplin UGM</h2>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="avatar">DC</div>
+              <h4 class="member-name">Divo Cahaya Fikri</h4>
+              <span class="member-dept">Teknik Nuklir</span>
+              <span class="member-role">Ketua Tim</span>
+            </div>
+            <div class="team-card">
+              <div class="avatar">NL</div>
+              <h4 class="member-name">Nasyawana Ladita</h4>
+              <span class="member-dept">Kimia</span>
+              <span class="member-role">Produksi & QC</span>
+            </div>
+            <div class="team-card">
+              <div class="avatar">UM</div>
+              <h4 class="member-name">Umi Muthoharoh</h4>
+              <span class="member-dept">Akuntansi</span>
+              <span class="member-role">Keuangan</span>
+            </div>
+            <div class="team-card">
+              <div class="avatar">RA</div>
+              <h4 class="member-name">Reyhan Abelard</h4>
+              <span class="member-dept">Rek. Perangkat Lunak</span>
+              <span class="member-role">Teknologi Digital</span>
+            </div>
+            <div class="team-card">
+              <div class="avatar">BN</div>
+              <h4 class="member-name">Balqhis Naila</h4>
+              <span class="member-dept">Filsafat</span>
+              <span class="member-role">PR & Edukasi</span>
+            </div>
+          </div>
+
+          <div class="mentor-card">
+            <div class="mentor-left">
+              <div class="mentor-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <div>
+                <div class="mentor-label">Dosen Pendamping PKM-K</div>
+                <div class="mentor-name">Choirunnisa Arifa, S.E., M.Sc., Ph.D., Ak., CA.</div>
+                <div class="mentor-dept">Fakultas Ekonomika dan Bisnis · Universitas Gadjah Mada</div>
+              </div>
+            </div>
+            <div class="pill pill-green">🎓 Terverifikasi UGM</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== COMPARISON TABLE ===== -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Komparasi</span>
+          <h2 class="section-title">MushFoam vs. kemasan konvensional</h2>
+          <p class="section-desc">Evaluasi teknis dan ekologis terhadap tiga pilihan kemasan pelindung di pasar.</p>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="comp-table" aria-label="Tabel perbandingan kemasan">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th class="col-mush">🌿 MushFoam</th>
+                <th>Styrofoam (EPS)</th>
+                <th>Molded Pulp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Terurai secara alami</td>
+                <td class="col-mush check">✓ Beberapa minggu</td>
+                <td class="cross">✗ 100–500 tahun</td>
+                <td class="check">✓ Ya</td>
+              </tr>
+              <tr>
+                <td>Daya serap benturan</td>
+                <td class="col-mush check">✓ Sangat baik</td>
+                <td class="cross">✗ Getas & rontok</td>
+                <td class="cross">✗ Kurang untuk beban berat</td>
+              </tr>
+              <tr>
+                <td>Ketahanan terhadap air</td>
+                <td class="col-mush check">✓ Tahan (lapisan beeswax)</td>
+                <td class="check">✓ Tahan</td>
+                <td class="cross">✗ Mudah lembek</td>
+              </tr>
+              <tr>
+                <td>Kustomisasi bentuk 3D</td>
+                <td class="col-mush check">✓ Mudah & fleksibel</td>
+                <td class="cross">✗ Cetakan mahal</td>
+                <td class="cross">✗ Butuh mesin berat</td>
+              </tr>
+              <tr>
+                <td>Sisa pasca pakai</td>
+                <td class="col-mush check">✓ Jadi pupuk organik</td>
+                <td class="cross">✗ Mikroplastik abadi</td>
+                <td class="check">✓ Bubur kertas</td>
+              </tr>
+              <tr>
+                <td>Nilai eco-branding</td>
+                <td class="col-mush check">✓ Tinggi</td>
+                <td class="cross">✗ Buruk</td>
+                <td class="check">✓ Standar</td>
+              </tr>
+              <tr>
+                <td>Estimasi harga</td>
+                <td class="col-mush" style="font-weight:800;color:var(--gold)">Rp 5.000 / pcs</td>
+                <td>Rp 4.000 / pcs</td>
+                <td>Rp 6.500 / pcs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CALCULATOR ===== -->
+    <section class="calc-section" id="kalkulator">
+      <div class="container">
+        <div class="calc-card reveal">
+          <div class="calc-inputs">
+            <div>
+              <span class="section-tag">Kalkulator Dampak</span>
+              <h2>Seberapa besar dampak yang bisa Anda ciptakan?</h2>
+              <p>Geser slider untuk melihat proyeksi pengurangan sampah plastik dari kebutuhan pengemasan bisnis Anda
+                setiap bulannya.</p>
+            </div>
+
+            <div>
+              <div class="range-label-row">
+                <span class="range-title">Volume kemasan per bulan</span>
+                <span class="range-badge" id="calc-vol-display">2.000 pcs</span>
+              </div>
+              <input type="range" id="calc-slider" min="100" max="25000" step="100" value="2000"
+                aria-label="Volume kemasan">
+              <div class="range-hints">
+                <span>100 pcs</span>
+                <span>25.000+ pcs</span>
+              </div>
+            </div>
+
+            <a href="#" id="wa-btn" class="btn btn-primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+              Konsultasikan via WhatsApp
+            </a>
+          </div>
+
+          <div class="calc-results">
+            <span class="results-label">Estimasi kontribusi per bulan</span>
+
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <div class="metric-val" id="m-plastic">90,0 kg</div>
+                <div class="metric-name">Styrofoam dicegah</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-val" id="m-co2">288,0 kg</div>
+                <div class="metric-name">Reduksi emisi CO₂</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-val" id="m-micro">90.000 g</div>
+                <div class="metric-name">Mikroplastik dieliminasi</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-val" id="m-compost">160,0 kg</div>
+                <div class="metric-name">Kompos alami dihasilkan</div>
+              </div>
+            </div>
+
+            <div class="cost-box">
+              <div>
+                <div class="cost-label">Estimasi investasi kemasan</div>
+                <div class="cost-val" id="m-cost">Rp 10.000.000</div>
+              </div>
+              <span class="cost-badge">ROI 29,97%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Yang sering ditanyakan</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item open">
+            <button class="faq-trigger">
+              <span class="faq-q">Apakah jamurnya bisa tumbuh kembali saat terkena air?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p class="faq-a">Tidak. Sebelum produk selesai, MushFoam melewati proses pemanasan di oven 80–90°C selama
+                4–8 jam yang secara permanen menghentikan semua aktivitas biologis. Material menjadi kering dan steril —
+                tidak akan tumbuh kembali meski terkena air.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span class="faq-q">Berapa lama MushFoam bisa disimpan sebelum dipakai?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p class="faq-a">Dalam kondisi penyimpanan ruangan yang kering, MushFoam bisa bertahan bertahun-tahun
+                tanpa penurunan kekuatan. Penguraian alami baru aktif saat material dikubur di tanah yang kaya
+                mikroorganisme — bukan di rak gudang.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span class="faq-q">Bagaimana ketahanannya terhadap goncangan saat pengiriman?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p class="faq-a">Struktur miselium membentuk matriks serat yang elastis, menyerap dan mendistribusikan
+                energi benturan secara merata. Dikombinasikan dengan lapisan beeswax, performa pengirimannya setara
+                dengan busa sintetis konvensional.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span class="faq-q">Apakah bisa dikirim sampel ke luar Yogyakarta?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p class="faq-a">Ya. Kami melayani pengiriman sampel ke seluruh Indonesia. Isi formulir atau hubungi kami
+                via WhatsApp, dan tim kami akan mengurus pengirimannya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT / CTA ===== -->
+    <section class="contact-section" id="kontak">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-inner">
+            <div class="pill pill-green">
+              Mulai Bermitra
+            </div>
+            <h2 class="cta-title">Tertarik mencoba MushFoam untuk bisnis Anda?</h2>
+            <p class="cta-desc">Hubungi kami untuk sampel gratis dan informasi penawaran kemasan MushFoam sesuai
+              kebutuhan bisnis Anda.</p>
+            <div class="cta-btns">
+              <a href="https://api.whatsapp.com/send?phone=6282137503755&text=Halo%20Tim%20MushFoam%2C%20saya%20ingin%20berdiskusi%20mengenai%20kemasan%20MushFoam."
+                target="_blank" rel="noopener" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                Hubungi via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <img src="LOGO.png" alt="Logo MushFoam" class="logo-img" width="36" height="36">
+            <span class="brand-name">MushFoam</span>
+          </a>
+          <p class="footer-brand-desc">Kemasan bio-komposit berbasis miselium jamur dan limbah pertanian. Inovasi PKM-K
+            Universitas Gadjah Mada 2026.</p>
+          <div class="pill pill-green" style="align-self:flex-start;">PKM-K UGM 2026</div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#produk" class="footer-link">Product</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+            <li><a href="#kontak" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produk</h4>
+          <ul class="footer-links">
+            <li><a href="#produk" class="footer-link">MushFlat 60×40×2 cm</a></li>
+            <li><a href="#produk" class="footer-link">MushCube 15×15 cm</a></li>
+            <li><a href="#kalkulator" class="footer-link">Kalkulator Dampak</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Kontak</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link">Yogyakarta, Indonesia</span></li>
+            <li><a href="https://api.whatsapp.com/send?phone=6282137503755" class="footer-link">+62 821-3750-3755</a>
+            </li>
+            <li><a href="mailto:divocahayafikri535151@mail.ugm.ac.id"
+                class="footer-link">divocahayafikri535151@mail.ugm.ac.id</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 MushFoam · PKM-K Universitas Gadjah Mada</span>
+        <a href="#hero" class="footer-link">Kembali ke atas ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" fill="none">
+  <defs>
+    <linearGradient id="it" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EAE6DE"/>
+      <stop offset="100%" stop-color="#D4CFC5"/>
+    </linearGradient>
+    <linearGradient id="il" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C5BFB4"/>
+      <stop offset="100%" stop-color="#AFA89D"/>
+    </linearGradient>
+    <linearGradient id="ir" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8B1A6"/>
+      <stop offset="100%" stop-color="#A09A8E"/>
+    </linearGradient>
+    <linearGradient id="cavity" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BFB9AF"/>
+      <stop offset="100%" stop-color="#A8A19A"/>
+    </linearGradient>
+  </defs>
+  <!-- Tray outer top -->
+  <path d="M 160 35 L 280 95 L 160 155 L 40 95 Z" fill="url(#it)" stroke="#C2BBB0" stroke-width="1"/>
+  <!-- Tray left face -->
+  <path d="M 40 95 L 160 155 L 160 205 L 40 145 Z" fill="url(#il)" stroke="#AAA49A" stroke-width="1"/>
+  <!-- Tray right face -->
+  <path d="M 160 155 L 280 95 L 280 145 L 160 205 Z" fill="url(#ir)" stroke="#968F85" stroke-width="1"/>
+  <!-- Concave cavity / mold inset on top surface -->
+  <ellipse cx="160" cy="100" rx="65" ry="32" fill="url(#cavity)" stroke="#A8A39A" stroke-width="1.2"/>
+  <ellipse cx="160" cy="100" rx="50" ry="22" fill="#A39D95" opacity="0.5"/>
+</svg>

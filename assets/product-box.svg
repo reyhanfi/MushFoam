@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" fill="none">
+  <defs>
+    <linearGradient id="bt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DED8CE"/>
+      <stop offset="100%" stop-color="#C9C2B6"/>
+    </linearGradient>
+    <linearGradient id="bl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BEB8AD"/>
+      <stop offset="100%" stop-color="#A9A29A"/>
+    </linearGradient>
+    <linearGradient id="br" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B0A89E"/>
+      <stop offset="100%" stop-color="#98918A"/>
+    </linearGradient>
+  </defs>
+  <!-- Box top -->
+  <path d="M 160 40 L 275 100 L 160 160 L 45 100 Z" fill="url(#bt)" stroke="#BDB7AC" stroke-width="1"/>
+  <!-- Box left -->
+  <path d="M 45 100 L 160 160 L 160 210 L 45 150 Z" fill="url(#bl)" stroke="#A4A09A" stroke-width="1"/>
+  <!-- Box right -->
+  <path d="M 160 160 L 275 100 L 275 150 L 160 210 Z" fill="url(#br)" stroke="#8E8880" stroke-width="1"/>
+  <!-- Box lid seam line -->
+  <line x1="45" y1="100" x2="275" y2="100" stroke="#A0998F" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Box fold flap suggestion top -->
+  <path d="M 160 40 L 200 62 L 160 85 L 120 62 Z" fill="#D0C9BF" stroke="#BDB7AC" stroke-width="0.75"/>
+</svg>
