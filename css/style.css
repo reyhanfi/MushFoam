@@ -1686,6 +1686,11 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.25); }
   border-radius: var(--r-sm);
   padding: 1rem;
   transition: border-color var(--t-base), transform var(--t-base);
+  min-height: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .metric-box:hover {
   border-color: var(--border-glow);
@@ -1698,6 +1703,7 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.25); }
   line-height: 1.1;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  font-variant-numeric: tabular-nums;
 }
 .metric-name {
   font-size: 0.75rem;
@@ -1718,6 +1724,8 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.25); }
   box-shadow: 0 4px 16px rgba(31,107,66,0.25);
   box-sizing: border-box;
   width: 100%;
+  min-height: 5.2rem;
+  justify-content: center;
 }
 .cost-header-row {
   display: flex;
@@ -1737,6 +1745,7 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.25); }
   border-top: 1px solid rgba(255,255,255,0.15);
   padding-top: 0.6rem;
   margin-top: 0.1rem;
+  font-variant-numeric: tabular-nums;
 }
 .cost-badge {
   font-size: 0.68rem;
@@ -2063,6 +2072,9 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.25); }
     font-size: 1.35rem;
     padding-top: 0.5rem;
   }
+  .cost-box {
+    min-height: 4.8rem;
+  }
   .metric-val {
     font-size: 1.15rem;
     white-space: nowrap;
@@ -2073,6 +2085,7 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.25); }
   }
   .metric-box {
     padding: 0.8rem;
+    min-height: 4.2rem;
   }
 }
 
