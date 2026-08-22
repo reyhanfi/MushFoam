@@ -75,9 +75,12 @@ function initProductTabs() {
   const nameEl = document.getElementById('hero-pill-title');
 
   const products = {
-    panel:  { src: 'MushFlat.png',  name: 'MushFlat — Lembaran 60 × 40 cm' },
-    corner: { src: 'Mushcube.png',  name: 'MushCube — Blok 15 × 15 cm' },
+    panel:  { src: 'MushFlat.png',  name: 'MushFlat — Lembaran 60 × 40 cm',  cls: 'img-flat' },
+    corner: { src: 'Mushcube.png',  name: 'MushCube — Blok 15 × 15 cm',       cls: 'img-cube' },
   };
+
+  // Set initial class
+  if (img) img.classList.add('img-flat');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -93,6 +96,9 @@ function initProductTabs() {
       setTimeout(() => {
         img.src = products[type].src;
         if (nameEl) nameEl.textContent = products[type].name;
+        // swap size class
+        img.classList.remove('img-flat', 'img-cube');
+        img.classList.add(products[type].cls);
         img.style.opacity = '1';
         img.style.transform = 'scale(1)';
       }, 140);
