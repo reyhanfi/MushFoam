@@ -2059,9 +2059,9 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.25); }
     font-size: 0.82rem;
     padding: 0.25rem 0.65rem;
   }
-  .cost-box {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  .cost-val {
+    font-size: 1.35rem;
+    padding-top: 0.5rem;
   }
 }
 
