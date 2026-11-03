@@ -1559,8 +1559,9 @@ img, svg { display: block; max-width: 100%; }
   border-bottom: 2px solid var(--border-md);
 }
 .comp-table th.col-mush {
-  background: rgba(31, 107, 66, 0.10);
-  color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+  letter-spacing: 0.04em;
 }
 .comp-table td.col-mush { 
   background: rgba(31, 107, 66, 0.04); 
@@ -1574,8 +1575,61 @@ img, svg { display: block; max-width: 100%; }
 .comp-table tbody tr:hover td { background: var(--surface-3); }
 .comp-table tbody tr:hover td.col-mush { background: rgba(64, 217, 142, 0.1); }
 
-.check { color: var(--primary); font-weight: 800; }
-.cross { color: var(--warn); font-weight: 800; }
+.check { color: var(--primary); font-weight: 800; font-size: 1.1rem; }
+.cross { color: var(--warn); font-weight: 800; font-size: 1.1rem; }
+
+/* Kolom MushFoam — lebih kuat */
+.comp-table th.col-mush {
+  background: var(--primary);
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+.comp-table td.col-mush {
+  background: rgba(31, 107, 66, 0.07);
+  font-weight: 700;
+  color: var(--text);
+  border-left: 2px solid var(--primary);
+}
+.comp-table td.col-mush.check {
+  color: var(--primary);
+}
+.comp-table tbody tr:hover td.col-mush { background: rgba(31, 107, 66, 0.13); }
+
+/* Baris harga */
+.price-row td { font-weight: 700; color: var(--text); }
+.price-row td.col-mush { color: var(--text); }
+
+/* Harga split MushCube / MushFlat */
+.price-split {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.price-split-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+.price-split-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.price-split-val {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+.price-split-divider {
+  color: var(--border-md);
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 0 0.15rem;
+}
 
 /* --------------------------------------------------------------------------
    Calculator Section
