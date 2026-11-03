@@ -1548,8 +1548,13 @@ img, svg { display: block; max-width: 100%; }
   padding: 1.2rem 1.5rem;
   font-size: 0.9rem;
   border-bottom: 1px solid var(--border);
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
+}
+/* Kolom pertama (Indikator) tetap rata kiri */
+.comp-table th:first-child,
+.comp-table td:first-child {
+  text-align: left;
 }
 .comp-table th {
   background: var(--surface-3);
@@ -1603,6 +1608,7 @@ img, svg { display: block; max-width: 100%; }
 .price-split {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
 }
