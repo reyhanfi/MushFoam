@@ -130,13 +130,15 @@ function initCalculator() {
 
   function update() {
     const vol = parseInt(slider.value, 10);
-    if (volLabel) volLabel.textContent = fmt(vol) + ' pcs';
+    if (volLabel) volLabel.textContent = fmt(vol) + ' box';
 
-    const plastic = (vol * 0.045).toFixed(1);
-    const co2 = (plastic * 3.2).toFixed(1);
-    const micro = fmt(vol * 45);
-    const compost = (vol * 0.08).toFixed(1);
-    const cost = 'Rp ' + fmt(vol * 5000);
+    // 1 box = 5 pcs, berat EPS per pcs ~45g
+    const pcs = vol * 5;
+    const plastic = (pcs * 0.045).toFixed(1);
+    const co2 = (parseFloat(plastic) * 3.2).toFixed(1);
+    const micro = fmt(pcs * 45);
+    const compost = (pcs * 0.08).toFixed(1);
+    const cost = 'Rp ' + fmt(vol * 16249);
 
     if (mPlastic) mPlastic.textContent = plastic.replace('.', ',') + ' kg';
     if (mCo2) mCo2.textContent = co2.replace('.', ',') + ' kg';
@@ -145,7 +147,7 @@ function initCalculator() {
     if (mCost) mCost.textContent = cost;
 
     if (waBtn) {
-      const msg = `Halo Tim MushFoam, saya tertarik berkonsultasi mengenai kebutuhan kemasan sekitar ${fmt(vol)} pcs/bulan. Mohon informasi penawaran dan pengiriman sampel.`;
+      const msg = `Halo Tim MushFoam, saya tertarik berkonsultasi mengenai kebutuhan kemasan sekitar ${fmt(vol)} box/bulan. Mohon informasi penawaran dan pengiriman sampel.`;
       waBtn.href = `https://api.whatsapp.com/send?phone=6282137503755&text=${encodeURIComponent(msg)}`;
     }
   }
